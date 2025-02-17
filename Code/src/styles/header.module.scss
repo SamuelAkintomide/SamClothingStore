@@ -1,0 +1,366 @@
+$white: #ffffff;
+$black: #000000;
+$faded: rgba(0, 0, 0, 0.5);
+
+.h1, .h2, .h3, .h4,.h5, .h6, .searchBar{
+    position: relative;
+    color: var(--font-color);
+    padding: 10px 15px 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none; //Remove underline
+  }
+  
+  .h3{
+    position: relative;    
+  }
+  
+  .ul{
+    position: relative;
+    text-decoration: none; //Remove underline
+    line-height: 35px;
+    list-style: none;
+    padding: 5px 10px 5px 30px;
+  }
+
+  .h4{
+    position: relative;
+    top: -50px;
+  }
+
+  .h5{
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  .h6{
+    font-size: 12px;
+  }
+
+  .h7{
+    
+    color: #000000;
+  }
+
+.logo{
+    position: fixed;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+    z-index: 998;
+}
+
+//--------------------------------------------------------
+.header{
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  height: 40px;
+  z-index: 9;
+}
+
+.hideBlur{
+  position: fixed;
+  top: -2%;
+  width: 100%;
+  height: 102%;
+  padding: 0px;
+  transition-delay: 1s;
+  transform: translateX(100%);
+}
+
+.hideBlur.show{
+  transition-delay: 0.6s;
+  transform: translateX(0%);
+}
+
+.backBlur{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.6s ease 0.5s;
+}
+
+.backBlur.show{
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.bagContainer{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 480px;
+    padding: 20px; 
+    background-color: #f8f8f8;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 10;
+    transition: all 0.6s ease 0.5s;
+    
+  }
+   
+  .bagContainer.show{
+    transform: translateX(0%);
+    transition: all 0.6s ease 0.5s;
+  }
+  
+  .top{
+    display: flex;
+    width: 100%;
+    justify-content:space-between; 
+    border-bottom: 1px solid black;
+  }
+  
+  .bag{
+    width: 18px;
+    height: 18px;
+  }
+
+  .closeIcon{
+    position: relative;
+    width: 12px;
+    height: 12px;
+  }
+
+  .button, .close, .h6{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .button{
+    padding: 10px 15px 10px 10px;
+  }
+  
+  .mainNavs{
+    position: relative;
+    display: flex;
+    list-style: none;
+    width: auto;
+  }
+  
+.contents{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal{
+    position: relative;
+    display: flex;
+    width: 160px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons{
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-left: 15px;
+}
+
+.menuShow{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 60px 0px 100px;
+  margin: 0;
+  background: $faded;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.innerContainer{
+  position: relative;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+.searchBar{
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 90%;
+  margin-bottom: 5px;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200%);
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.2); /* Black color with 40% opacity */
+  border: none;
+  font-size: 14px;
+  transition: transform 0.3s ease-in-out;
+  &:focus{
+    border: none;
+  }
+}
+
+.searchBar.show{
+  transform: translateY(0%);
+}
+
+.hide{
+  overflow: hidden;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition-delay: 1s;
+}
+
+.hide.show{
+  transform: translateY(0%);
+  transition: transform 0.0s ease-in-out;
+}
+
+.dropDown {
+  position: relative;
+  display: flex;
+  height: auto;
+  //height: 350px;
+  text-decoration: none;
+  align-items:start;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  margin: 0;
+  transform: translateY(-100%);
+  //background:  rgba(0, 0, 0, 0.8);
+  background: $faded;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropDown.show{
+  transform: translateY(0%);
+  z-index: 5;
+}
+
+.outerImageContainers{
+  position: relative;
+  height: 405px;
+  display: flex;
+  text-align: right;
+}
+
+.img{
+  position: relative;
+  height: 405.56px;
+  margin: 0px 0px 0px 10px;
+}
+
+
+
+@media (max-width: 1260px) {
+  .img{
+    height: 345px;
+  }
+
+  .outerImageContainers{
+    height: 345px;
+  }
+}
+
+@media (max-width: 1080px) {
+    .menuButtonContainer{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menuShow{
+        display: block;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        width: 480px;
+        padding: 20px 20px 20px 20px; 
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        z-index: 5;
+        transition: all 0.6s ease 0.5s;
+    }
+    
+    .menuShow.show{
+    transform: translateX(0%);
+    }
+
+    .innerContainer{
+      display: block;
+    }
+
+    .hide {
+      display: block;
+      position: fixed;
+      right: 0;
+      height: 100%;
+      width: 480px;
+      padding: 0px 0px 0px 0px;
+      background: transparent; 
+      
+      transform: translate(100%,17%);
+      box-shadow: -2px 0 4px rgba(0, 0, 0, 0);
+      transition: transform 0.3s ease-in-out;
+      z-index: 5;
+      transition: all 0.6s ease 0.5s
+    }
+
+    .hide.show{
+      transform: translate(0%, 17%);
+      
+    }
+
+    .dropDown{
+      transform: translateY(0%);
+      background:  rgba(248, 2, 2, 0);
+    }
+
+    .ul{
+      padding: 0;
+    }
+
+  .navbar {
+    position: fixed;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 1px solid $black;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: 0.3s ease-in-out;
+    margin: 20px;
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+  }
+
+  .searchBar{
+    transform: translateX(150%);
+    width: 100%;
+  }
+
+  .personal{
+    width: 100%;
+    justify-content: center;
+  }
+}

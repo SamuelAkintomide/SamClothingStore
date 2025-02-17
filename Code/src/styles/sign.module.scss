@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --linear-grad: linear-gradient(to right, #8f40dd, #0088a9);
+    --grad-clr1: #8f40dd;
+    --grad-clr2: #0088a9;
+}
+
+.body {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.h2, .h3, .button {
+    position: relative;
+    color: black;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px 0px 5px;
+}
+
+.input::placeholder{
+    text-transform: uppercase;
+}
+
+.h2{
+    font-size: 18px;
+}
+
+.h3{
+    font-size: 16px;
+}
+
+.input, .button {
+    font-size: 12px;
+    width: 540px;
+    height: 46px;
+    padding: 15px 12px;
+    margin-bottom: 15px;
+}
+
+.input{
+    background: rgba(0, 0, 0, 0.2); /* Black color with 40% opacity */
+    border: none;
+}
+
+.button{
+    background: #f6f5f7;
+    border: 1px solid;
+    margin-top: 30px;
+    &:hover{
+        color: #f6f5f7;
+        background-color: black;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.forgot{
+    position: relative;
+    font-size: 12px;
+    color: black;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    //background: #f6f5f7;
+}
+
+.logo{
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+    margin: 20px;
+}
+
+.overlayContainer {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    z-index: -1;
+}
+
+.overlay {
+    position: relative;
+    background:#f6f5f7;
+    height: 200%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.rightPanelActive .overlayContainer {
+    transform: translateY(-199%);
+}
+
+.rightPanelActive .bottom{
+    background: black;
+}

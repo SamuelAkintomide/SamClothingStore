@@ -1,0 +1,140 @@
+h1, h2, h3, h4, h5, h6, p, ul{
+    color: var(--font-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: normal;
+    border: none;
+    background-color: transparent;
+  }
+
+  button{
+    color: var(--font-color);
+    background: transparent;
+    border: none;
+  }
+
+  h1 {
+    font-size: 56px;
+    text-align: center;
+    margin: 60px 0;
+  }
+
+  h5{
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h6{
+    font-size: 12px;
+    margin: 0;
+    font-weight: 100;
+  }
+
+  ul{
+    position: relative;
+    text-decoration: none; //Remove underline
+    line-height: 35px;
+    list-style: none;
+    padding: 5px 10px 5px 30px;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+  
+    --accent: var(--font-color);
+  
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);//Main colour Change 
+    color: var(--accent);
+  
+  &:before {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+

@@ -1,0 +1,64 @@
+.main{
+    position: relative;
+    display: block;
+    padding: 0px 40px;
+}
+
+.options{
+    display: flex;
+    justify-content:center;
+}
+
+.left{
+    display: grid;
+    border-bottom: 0.5px solid var(--font-color);
+    height: 305px;
+    margin-right: 60px;
+}
+
+.right{
+    display: grid;
+    width: 540px;
+    justify-content: center;
+}
+
+.button{
+    border: none;
+    border-top: 0.5px solid var(--font-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    padding: 28px 10px;
+    &:hover{
+        cursor: pointer;
+        background: var(--background);
+        transition: 0.2s ease-in-out;;
+    }
+}
+
+
+.account, .orders, .preferences, .addresses{
+    display: none;
+    &.show{
+        display: grid
+    }
+}
+.input{
+    font-size: 12px;
+    width: 540px;
+    height: 46px;
+    padding: 15px 12px;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: var(--font-color);
+    &::placeholder{
+    text-transform: uppercase;
+    }
+}
+
+.h3{
+    text-align: center;
+    margin: 0px 0px 21.28px 0px;
+}
